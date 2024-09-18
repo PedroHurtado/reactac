@@ -1,0 +1,62 @@
+Interpretado
+No tipado
+    var a=1
+    a="Hello
+Dinamico
+    a={id:1}
+    a.name="Pedro Hurtado"
+Orientado a objetos
+    <2015 (atributo name, constructor, metodo privado, metodo publico metodo statico)
+
+    //constructor de mi tipo Foo
+    function Foo(name){
+        this.name = name
+    }
+    //publico
+    Foo.prototype.write = function(){
+        this._write();
+    }
+    //private
+    Foo.prototype._write = function(){
+        console.log(this.name)
+    }
+    Foo.write=function(){
+        console.log("static method")
+    }
+
+    >2015-ES6
+    class Foo{
+        constructor(name){
+            this.name = name
+        }
+        write(){
+            this._write()
+        }
+        _write(){
+            console.log(this.name)
+        }
+        static write(){
+            console.log("static method")
+        }
+    }
+
+    1. Object
+        https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object
+    2. Class JavaScript
+        https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes
+        Transpilacion
+                Babel->OpenSource->Faceboock
+                TypeScript->Microsoft
+    3. Cadena de prototipos
+        https://developer.mozilla.org/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+
+        Obtener la cadena de prototipos 
+
+        variable.__proto__
+
+        undefined->undefined
+        null->object
+
+    https://github.com/tc39/proposals/blob/HEAD/finished-proposals.md
+    
+Funcional

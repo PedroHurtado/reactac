@@ -1,0 +1,23 @@
+1. JavaScript es monotread(sincrona)
+2. Worker
+    https://developer.mozilla.org/es/docs/Web/API/Web_Workers_API/Using_web_workers
+
+timeout
+promise
+eventos
+
+console.log("start")    //sincrono
+setTimeout(()=>console.log("timeout"),0)  //Task
+Promise.resolve()                         //Microtask
+    .then(()=>console.log("Promise1"))
+    .then(()=>console.log("Promise2"))
+console.log("end") //sincrono
+
+https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/
+https://www.youtube.com/watch?v=8aGhZQkoFbQ
+
+start
+end
+Promise1
+Promise2
+timeout

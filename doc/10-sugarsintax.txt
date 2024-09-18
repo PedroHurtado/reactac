@@ -1,0 +1,133 @@
+1. Rest Parameter
+
+function sum(...values){
+    return values.reduce((a,v)=>a+v)
+}
+
+
+//ES5
+
+function sum() {
+    var values = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        values[_i] = arguments[_i];
+    }
+    return values.reduce(function (a, v) { return a + v; });
+}
+
+sum(1,2,3,4,5,6)
+    1+2=3
+    3+3=6
+    6+4=10
+    10+5=15
+    15+6=21
+
+1. Solo puede haber uno
+2. Debe de ser el ultimo argumento de la funcion
+
+function foo(a,b,...rest)  foo(1,2,3,4,5,6,7,8)
+function foo(a,...rest,b) //error
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+2. Default parameters
+
+function sum(a,b=4){
+    return a+b
+}
+
+function sum(a, b) {
+    if (b === void 0) { b = 4; }
+    return a + b;
+}
+sum(5) //9
+sum(5,3) //8
+
+1. todos los que quieras siempre que sean los últimos de la funcion
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+
+3. Desectructuracion
+
+//array
+let [a,b] = [1,2,3]
+
+a->1
+b->2
+
+let [a,b,...rest] = [1,2,3,4,5,6]
+a->1
+b->2
+rest->[3,4,5,6]
+
+var _a = [1, 2, 3, 4, 5, 6], a = _a[0], b = _a[1], rest = _a.slice(2);
+
+//objetc
+
+let {id,name} = {id:1,name:'pedro', phone:3453453453}
+id->1
+name->pedro
+
+var _a = { id: 1, name: 'pedro', phone: 3453453453 }, id = _a.id, name = _a.name;
+
+let {id,name,...rest} = {id:1,name:'pedro', phone:3453453453}
+id->1
+name->pedro
+rest = {phone:3453453453}
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+4. Spread Operator
+a=[1,2,3]
+b=[4,5,6]
+
+const c=[...a,...b]
+[1,2,3,4,5,6]
+
+const a = {id:1,name:'pedro hurtado'}
+const b={name:'pedro'}
+
+const c = {...a,...b}
+
+id:1
+name:'pedro'
+
+const c = {...b,...a}
+{id:1,name:'pedro hurtado'}
+
+const a = {id:1,name:'pedro'}
+b={id:1,r:{guia:2222}}
+
+let {r} = b
+const result = {...a,...r}
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+
+5. Cortocircuito
+
+    && y ||
+
+    const a = b || {}
+
+    a={id:1}
+    b={id:2,foo:()=>{}}
+
+    a.foo() //error
+    b.foo() //ok
+
+    if(a.foo){
+
+    }
+
+    a && a.foo && a.foo()
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+    
+    a.foo?()
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+    
+

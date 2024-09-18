@@ -1,0 +1,17 @@
+modules
+    1. export
+    2. import
+
+No es otra cosa que un archivo js
+
+var era publica
+    cjs->node
+    umd->node,explorador
+    amd->explorador
+    system->explorador
+    iief->explorador
+
+    function foo(){
+        var a=1
+    }
+cualquier variable es privada excepto que se exporte

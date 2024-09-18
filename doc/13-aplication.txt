@@ -1,0 +1,38 @@
+1. SPA(Single page application)
+        index.html
+        div.id="app"
+        react->Componente en ese id
+    Pros
+        Voy a transmitir menos bytes desde el servidor al cliente
+            api->json->clientes->dom
+    Contras
+        Memoria->Code spliting
+        Peor rendimiento
+        SEO
+2. MPA(Multiple page application)
+    Pros
+        menos memoria en el cliente
+        mejor rendimiento
+        SEO
+    Contras
+        Sobrecarga de servidor
+    SSR->Server side rendering
+    Node->instalado
+    Node->Api Java->Json->Estado de aplicacion
+    <script>
+        json
+    </script>
+    Hidratacion(Angular,React,Svelte,Vue)
+    Qwik.js->ServiceWorker->js del cliente
+    //https://qwik.dev/docs/concepts/resumable/
+3. PWA(Progresive web application)
+    1. permiten trabajar offline
+    2. cargan el minimo para representar la página
+    3. progresivamente van descargando recursos
+    4. este control está fuera del hilo principal
+
+    https://developer.chrome.com/blog/beyond-spa?hl=es-419
+
+    contra->
+
+    Dificultad en la gestion de las caches

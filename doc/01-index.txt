@@ -1,0 +1,22 @@
+1. historia
+    1.1 Object anterior 2015, posterior 2015
+2. this(ambito)
+    call,apply,bind
+3. null y undefined
+4. Array, Map, Set
+    filter,find,sort,map,reduce
+5. callback, clousure
+6. Generator
+7. Sugar sintax
+    Rest Operator
+    Default parameter
+    Desectructuracion
+    Spread Operator
+    cortocircuito
+    ternario
+    Optinal chaining
+    Nullish coalescing
+8. Código asincrono
+9. Modulos
+    import
+    export

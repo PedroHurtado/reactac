@@ -1,0 +1,30 @@
+1. Dados los siguientes constructores
+
+    function Foo(name){
+        this.name = name
+    }
+
+    function Bar(name,surname){
+        this.name = name
+        this.surname = surname
+    }
+
+crear una function factoria con la siguiente firma
+
+function factory(scope, strType, ...args){
+    debugger
+    const ctor = scope[strType]
+    if(!ctor){
+        throw `El ${ctor} no existe`
+    }
+    const instance = Object.create(ctor.prototype)
+    ctor.apply(instace,args)
+    return instance
+}
+capaz de crear instancias de Foo y Bar sin el operador new
+
+factory(window,"Foo","Pedro")
+
+Foo{name:"Pedro}
+
+factory(window,"Bar","Pedro", "Hurado")

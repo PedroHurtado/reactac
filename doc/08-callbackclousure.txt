@@ -1,0 +1,37 @@
+1. Callback no es mas que pasar un funcion como argumento a otra funcion
+
+    [1,2,3].filter(v=>v!==0)
+
+    //https://developer.mozilla.org/es/docs/Glossary/Callback_function
+2. Clouruse
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+    funcion retorna otra funcion
+    Crear instancias de objetos
+
+    function sum(a){
+        return function(b){
+            debugger
+            return a+b
+        }
+    }
+    sum(3)(5) //8
+
+    function events(node,event,cb){
+        node.addEventListener(event,cb)
+        return ()=>node.removeEventListener(event,cb)
+    }
+
+    //signal
+
+    Angular,Qwiok,Esvelte,SolidJs,Vue(3)
+
+    React->Clousures que no son signal para mantener el estado del componente
+
+    //signal
+
+    function signal(initialValue){
+        let value = initialValue
+        const fn = ()=>value
+        fn.set = (newValue)=>value=newValue
+        return fn
+    }
