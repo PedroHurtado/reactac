@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Ternario from "./if/Ternario";
+import Array from "./array/Array";
+import Calendar from "./calendar/Calendar";
 function App() {
+  let name ="Pedro"
+  const a = {
+    id:1,
+    name:'pedro',
+    data:[1,2,3,4,5,6]
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Calendar/>
+      <div>Hello World {name}</div>
+      <Ternario/>
+      <Array {...a}/>
+    </>
   );
 }
-
 export default App;
