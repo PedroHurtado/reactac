@@ -1,18 +1,14 @@
-import { useState, useEffect } from "react";
+import { useCarrito } from "./useCarrito";
+
 export default function Carrito(){
-    const [items, setItems] = useState([])
-    const addElement =(ev)=>{
-        ev.stopPropagation()
-        const {detail} = ev
-        items.push(detail)
-        setItems([...items])
-    }  
-    useEffect(()=>{                
-        document.addEventListener('carrito', addElement)
-        return ()=>document.removeEventListener('carrito', addElement)
-    })
-    const length = items.length
+    const items = useCarrito([])
+    function handlerClick(){
+        console.log(items)
+    }
     return(
-        <div>Total:{length}</div>
+        <>
+            <div>Total:{items.length}</div>
+            <button onClick={handlerClick}>Pagar</button>
+        </>
     )
 }
