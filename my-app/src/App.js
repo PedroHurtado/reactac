@@ -6,7 +6,8 @@ import ArrayState from "./arrayState/ArrayState";
 import ObjectState from "./objectState/ObjectState";
 import Timer from "./timer/Timer";*/
 //import Layout from "./carrito/Layout";
-import LayoutPubsub from "./carritopubsub/Layout";
+//import LayoutPubsub from "./carritopubsub/Layout";
+import CustomerForm from "./Form/CustomerForm";
 
 function App() {
   /*let name ="Pedro"
@@ -17,8 +18,7 @@ function App() {
   }*/
   return (
     <>
-      <LayoutPubsub/>
-      
+      <CustomerForm/>      
     </>
   );
 }
