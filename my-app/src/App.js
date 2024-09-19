@@ -5,7 +5,8 @@ import Counter from "./counter/Counter";
 import ArrayState from "./arrayState/ArrayState";
 import ObjectState from "./objectState/ObjectState";
 import Timer from "./timer/Timer";*/
-import Layout from "./carrito/Layout";
+//import Layout from "./carrito/Layout";
+import LayoutPubsub from "./carritopubsub/Layout";
 
 function App() {
   /*let name ="Pedro"
@@ -16,7 +17,8 @@ function App() {
   }*/
   return (
     <>
-      <Layout/>      
+      <LayoutPubsub/>
+      
     </>
   );
 }
