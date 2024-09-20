@@ -7,7 +7,9 @@ import ObjectState from "./objectState/ObjectState";
 import Timer from "./timer/Timer";*/
 //import Layout from "./carrito/Layout";
 //import LayoutPubsub from "./carritopubsub/Layout";
-import CustomerForm from "./Form/CustomerForm";
+//import CustomerForm from "./Form/CustomerForm";
+
+import Post from "./fetchdata/Post";
 
 function App() {
   /*let name ="Pedro"
@@ -18,7 +20,7 @@ function App() {
   }*/
   return (
     <>
-      <CustomerForm/>      
+      <Post/>
     </>
   );
 }
