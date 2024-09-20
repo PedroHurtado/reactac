@@ -14,6 +14,11 @@ export function useQuery(initialUrl){
         setLoading(true)
         setData(null)
         setError(null)
+        
+        //https://developer.mozilla.org/es/docs/Web/API/Window/caches
+        //https://developer.mozilla.org/es/docs/Web/API/Worker
+        //https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event
+
 
         fetch(url)        
         //OK

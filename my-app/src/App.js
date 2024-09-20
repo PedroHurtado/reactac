@@ -8,8 +8,9 @@ import Timer from "./timer/Timer";*/
 //import Layout from "./carrito/Layout";
 //import LayoutPubsub from "./carritopubsub/Layout";
 //import CustomerForm from "./Form/CustomerForm";
+//import Post from "./fetchdata/Post";
+import Parent from "./context/Parent";
 
-import Post from "./fetchdata/Post";
 
 function App() {
   /*let name ="Pedro"
@@ -20,7 +21,8 @@ function App() {
   }*/
   return (
     <>
-      <Post/>
+      
+      <Parent/>
     </>
   );
 }
