@@ -1,4 +1,7 @@
 import {useEffect, useState} from 'react'
+//React Suspense
+//https://react.dev/reference/react/Suspense
+//https://blog.logrocket.com/async-rendering-react-suspense-hooks-other-methods/
 export function useQuery(initialUrl){
     
     const [url,setUrl] = useState(initialUrl)
