@@ -9,7 +9,9 @@ import Timer from "./timer/Timer";*/
 //import LayoutPubsub from "./carritopubsub/Layout";
 //import CustomerForm from "./Form/CustomerForm";
 //import Post from "./fetchdata/Post";
-import Parent from "./context/Parent";
+//import Parent from "./context/Parent";
+
+import MetaRouter from "./router/MetaRouter";
 
 
 function App() {
@@ -20,9 +22,8 @@ function App() {
     data:[1,2,3,4,5,6]
   }*/
   return (
-    <>
-      
-      <Parent/>
+    <>      
+      <MetaRouter/>
     </>
   );
 }
